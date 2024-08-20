@@ -36,4 +36,5 @@ function testHeure() : string {
   
   # test valeur hors intervalle
   if ((Heure(-1) != false) || (Heure(26) != false)) return "valeurs hors intervalle non détectée";
+  return "test Heure() réussi";
 }
