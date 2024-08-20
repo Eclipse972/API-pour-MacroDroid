@@ -83,12 +83,12 @@ include 'public/minute.php';
 		array('heure' => 24,'minute' => 25,	'résultat' => false),
 		array('heure' => 24,'minute' => 30,	'résultat' => false),
 		array('heure' => 24,'minute' => 45,	'résultat' => false),
-		array('heure' => 23,'minute' => 0,	'résultat' => false),	# à l'extérieur des frontières <=> heure = 23
-		array('heure' => 23,'minute' => 5,	'résultat' => false),
-		array('heure' => 23,'minute' => 15,	'résultat' => false),
-		array('heure' => 23,'minute' => 25,	'résultat' => false),
-		array('heure' => 23,'minute' => 30,	'résultat' => false),
-		array('heure' => 23,'minute' => 45,	'résultat' => false),
+		array('heure' => 23,'minute' => 0,	'résultat' => ''),	# à l'extérieur des frontières <=> heure = 23
+		array('heure' => 23,'minute' => 5,	'résultat' => '5'),
+		array('heure' => 23,'minute' => 15,	'résultat' => '15'),
+		array('heure' => 23,'minute' => 25,	'résultat' => '25'),
+		array('heure' => 23,'minute' => 30,	'résultat' => '30'),
+		array('heure' => 23,'minute' => 45,	'résultat' => '45'),
 
 		# zone rien (chaine vide) <=> minute = 0 et heure quelconque
 		array('minute' => 0,	'heure' => 9,	'résultat' => ''),	# dans la zone
