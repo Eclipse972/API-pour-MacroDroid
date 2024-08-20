@@ -103,4 +103,21 @@ include 'public/minute.php';
 		array('minute' => 17,	'heure' => 12,	'résultat' => 'et quart'),
 		# la frontière de gauche (0h15) à déjà été testée dans zone Erreur zone 3
 	);
+
+	foreach ($Tassertion as $assertion) {
+		$reponse = Minute($assertion['heure'], $assertion['minute']);
+
+		if ($reponse === false)	$réponseObtenue = 'false';
+		elseif($reponse === '')	$réponseObtenue = 'chaine vide';
+		else					$réponseObtenue = $reponse;
+
+		if ($assertion['résultat'] === false)	$réponseAttendue = 'false';
+		elseif($assertion['résultat'] === '')	$réponseAttendue = 'chaine vide';
+		else									$réponseAttendue = $reponse;
+
+		if ($reponse !== $assertion['résultat']) return "Echec pour {$assertion['heure']}h{$assertion['minute']} -> $réponseObtenue au lieu de $réponseAttendue";
+	}
+	return "testTminute() réussi";
  }
+
+echo testMinute(), "\n";
