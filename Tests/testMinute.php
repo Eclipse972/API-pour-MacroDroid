@@ -113,9 +113,10 @@ include 'public/minute.php';
 
 		if ($assertion['résultat'] === false)	$réponseAttendue = 'false';
 		elseif($assertion['résultat'] === '')	$réponseAttendue = 'chaine vide';
-		else									$réponseAttendue = $reponse;
+		else									$réponseAttendue = $assertion['résultat'];
 
-		if ($reponse !== $assertion['résultat']) return "Echec pour {$assertion['heure']}h{$assertion['minute']} -> $réponseObtenue au lieu de $réponseAttendue";
+		if ($reponse !== $assertion['résultat'])
+			return "Echec pour {$assertion['heure']}h{$assertion['minute']} -> $réponseObtenue au lieu de $réponseAttendue";
 	}
 	return "testTminute() réussi";
  }
