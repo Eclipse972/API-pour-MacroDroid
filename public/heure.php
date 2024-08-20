@@ -5,5 +5,7 @@
  * @return string|bool le texte pour la partie heure ou false si une erreur est survenue
  **/
 function Heure(int $heure) : string|bool {
-  return false; # le test échoue dès la remière assertions
+	if ($heure == 0) return 'minuit';
+	if ($heure == 12) return 'midi';
+	return "$heure heure";
 }
