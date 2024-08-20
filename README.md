@@ -1,4 +1,4 @@
-# API-pour-MacroDroid
+# API pour MacroDroid
 MD propose énormément d'actions mais ce n'est pas un langage de programmation.
 
 Récemment je suis tombé sur cette vidéo: [How to call Web APIs in MacroDroid](https://www.youtube.com/watch?v=PikZoycOXMg)
