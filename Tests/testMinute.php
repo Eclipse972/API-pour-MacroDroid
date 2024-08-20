@@ -1,5 +1,5 @@
 <?php
-include 'public/minutes.php';
+include 'public/minute.php';
 
 /**
  * Cette fonction prend deux paramètres heure et minute ce donne plus 1440 configuration à tester
