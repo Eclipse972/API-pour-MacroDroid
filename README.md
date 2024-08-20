@@ -21,7 +21,8 @@ Je voulais comme preuve de concept quelque chose de simple mais pas trop compliq
 Voici les exceptions et approximations dans ma manière de dire l'heure:
 
 - si heure = 0 je dis "minuit". Ex: "0h10" -> "minuit 10"
-- si heure = 12 je dis "midi". Ex : "12h20" -> " midi 20"
+- si heure = 12 je dis "midi". Ex : "12h20" -> "midi 20"
+- si minute = 0 je ne dit rien. Ex: "11h00" -> "11 heure"
 - si minute entre 13 et 16 et heure &lt; 13 je dis "et quart". Ex; "9h13" -&gt; "9 heure et quart" par contre 15h16 reste inchangé.
 - si minute entre 28 et 31 et heure &lt; 13 je dis "et demi". Ex: "11h27" -&gt; "11 heure et demi" mais 13h30 reste inchangé.
 
