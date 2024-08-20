@@ -90,5 +90,17 @@ include 'public/minutes.php';
 		array('h' => 23,'m' => 30,	'r' => false),
 		array('h' => 23,'m' => 45,	'r' => false),
 
+		# zone rien (chaine vide) <=> minute = 0 et heure quelconque
+		array('m' => 0,	'h' => 9,	'r' => ''),	# dans la zone
+		# les frontières droite, gauche et dessus on déjà été testées cf resp. Erreur zone 4, 3 et 1. il reste la frontière du dessous
+		array('m' => 1,	'h' => 9,	'r' => '1'),
+
+		# zone "et quart" <=> minutes dans [13,17] et heure dans [0;12]
+		array('m' => 15,	'h' => 9,	'r' => 'et quart'),	# dans la zone
+		
+		array('m' => 13,	'h' => 9,	'r' => 'et quart'), # à l'intérieur des frontières <=> heure dans {9h13(dessus), 12h15(droite) 9h17(dessous) 0h15(gauche)}
+		array('m' => 15,	'h' => 12,	'r' => 'et quart'),
+		array('m' => 17,	'h' => 12,	'r' => 'et quart'),
+		# la frontière de gauche (0h15) à déjà été testée dans zone Erreur zone 3
 	);
  }
