@@ -1,3 +1,4 @@
 <?php
-include '../public/minutes.php';
+include 'public/minutes.php';
+
 
