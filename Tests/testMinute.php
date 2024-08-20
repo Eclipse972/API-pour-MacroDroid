@@ -39,68 +39,68 @@ include 'public/minute.php';
  function testMinute() : string {
 	$Tassertion = array(
 		# Erreur zone 1 <=> minute < 0 et heure quelconque
-		array('m' => -5,	'h' => 9,	'r' => false),	# dans la zone
-		array('m' => -1,	'h' => -3,	'r' => false),	# à l'intérieur des frontières <=> minute = -1
-		array('m' => -1,	'h' => 5,	'r' => false),
-		array('m' => -1,	'h' => 18,	'r' => false),
-		array('m' => -1,	'h' => 28,	'r' => false),
-		array('m' => 0,		'h' => -3,	'r' => false),	# à l'extérieur des frontières <=> minute = 0
-		array('m' => 0,		'h' => 5,	'r' => 'rien'),
-		array('m' => 0,		'h' => 18,	'r' => 'rien'),
-		array('m' => 0,		'h' => 28,	'r' => false),
+		array('minute' => -5,	'heure' => 9,	'résultat' => false),	# dans la zone
+		array('minute' => -1,	'heure' => -3,	'résultat' => false),	# à l'intérieur des frontières <=> minute = -1
+		array('minute' => -1,	'heure' => 5,	'résultat' => false),
+		array('minute' => -1,	'heure' => 18,	'résultat' => false),
+		array('minute' => -1,	'heure' => 28,	'résultat' => false),
+		array('minute' => 0,	'heure' => -3,	'résultat' => false),	# à l'extérieur des frontières <=> minute = 0
+		array('minute' => 0,	'heure' => 5,	'résultat' => ''),
+		array('minute' => 0,	'heure' => 18,	'résultat' => ''),
+		array('minute' => 0,	'heure' => 28,	'résultat' => false),
 		
 		# Erreur zone 2 <=> minute > 59
-		array('m' => 88,	'h' => 9,	'r' => false),	# dans la zone
-		array('m' => 60,	'h' => -3,	'r' => false),	# à l'intérieur des frontières <=> minute = 60
-		array('m' => 60,	'h' => 5,	'r' => false),
-		array('m' => 60,	'h' => 18,	'r' => false),
-		array('m' => 60,	'h' => 28,	'r' => false),
-		array('m' => 59,	'h' => -3,	'r' => false),	# à l'extérieur des frontières <=> minute = 59
-		array('m' => 59,	'h' => 5,	'r' => '59'),
-		array('m' => 59,	'h' => 18,	'r' => '59'),
-		array('m' => 59,	'h' => 28,	'r' => false),
+		array('minute' => 88,	'heure' => 9,	'résultat' => false),	# dans la zone
+		array('minute' => 60,	'heure' => -3,	'résultat' => false),	# à l'intérieur des frontières <=> minute = 60
+		array('minute' => 60,	'heure' => 5,	'résultat' => false),
+		array('minute' => 60,	'heure' => 18,	'résultat' => false),
+		array('minute' => 60,	'heure' => 28,	'résultat' => false),
+		array('minute' => 59,	'heure' => -3,	'résultat' => false),	# à l'extérieur des frontières <=> minute = 59
+		array('minute' => 59,	'heure' => 5,	'résultat' => '59'),
+		array('minute' => 59,	'heure' => 18,	'résultat' => '59'),
+		array('minute' => 59,	'heure' => 28,	'résultat' => false),
 
 		#Erreur zone 3 <=> heure < 0 et minute quelconque
-		array('h' => -8,'m' => 9,	'r' => false),	# dans la zone
-		array('h' => -1,'m' => 0,	'r' => false),	# à l'intérieur des frontières <=> heure = -1
-		array('h' => -1,'m' => 5,	'r' => false),
-		array('h' => -1,'m' => 15,	'r' => false),
-		array('h' => -1,'m' => 25,	'r' => false),
-		array('h' => -1,'m' => 30,	'r' => false),
-		array('h' => -1,'m' => 45,	'r' => false),
-		array('h' => 0,	'm' => 0,	'r' => ''),		# à l'extérieur des frontières <=> heure = 0
-		array('h' => 0,	'm' => 5,	'r' => '5'),
-		array('h' => 0,	'm' => 15,	'r' => 'et quart'),
-		array('h' => 0,	'm' => 25,	'r' => '25'),
-		array('h' => 0,	'm' => 30,	'r' => 'et demi'),
-		array('h' => 0,	'm' => 45,	'r' => '45'),
+		array('heure' => -8,'minute' => 9,	'résultat' => false),	# dans la zone
+		array('heure' => -1,'minute' => 0,	'résultat' => false),	# à l'intérieur des frontières <=> heure = -1
+		array('heure' => -1,'minute' => 5,	'résultat' => false),
+		array('heure' => -1,'minute' => 15,	'résultat' => false),
+		array('heure' => -1,'minute' => 25,	'résultat' => false),
+		array('heure' => -1,'minute' => 30,	'résultat' => false),
+		array('heure' => -1,'minute' => 45,	'résultat' => false),
+		array('heure' => 0,	'minute' => 0,	'résultat' => ''),		# à l'extérieur des frontières <=> heure = 0
+		array('heure' => 0,	'minute' => 5,	'résultat' => '5'),
+		array('heure' => 0,	'minute' => 15,	'résultat' => 'et quart'),
+		array('heure' => 0,	'minute' => 25,	'résultat' => '25'),
+		array('heure' => 0,	'minute' => 30,	'résultat' => 'et demi'),
+		array('heure' => 0,	'minute' => 45,	'résultat' => '45'),
 
 		# Erreur zone 4 <=> heure > 23 et minute quelconque
-		array('h' => 28,'m' => 9,	'r' => false),	# dans la zone
-		array('h' => 24,'m' => 0,	'r' => false),	# à l'intérieur des frontières <=> heure = 24
-		array('h' => 24,'m' => 5,	'r' => false),
-		array('h' => 24,'m' => 15,	'r' => false),
-		array('h' => 24,'m' => 25,	'r' => false),
-		array('h' => 24,'m' => 30,	'r' => false),
-		array('h' => 24,'m' => 45,	'r' => false),
-		array('h' => 23,'m' => 0,	'r' => false),	# à l'extérieur des frontières <=> heure = 23
-		array('h' => 23,'m' => 5,	'r' => false),
-		array('h' => 23,'m' => 15,	'r' => false),
-		array('h' => 23,'m' => 25,	'r' => false),
-		array('h' => 23,'m' => 30,	'r' => false),
-		array('h' => 23,'m' => 45,	'r' => false),
+		array('heure' => 28,'minute' => 9,	'résultat' => false),	# dans la zone
+		array('heure' => 24,'minute' => 0,	'résultat' => false),	# à l'intérieur des frontières <=> heure = 24
+		array('heure' => 24,'minute' => 5,	'résultat' => false),
+		array('heure' => 24,'minute' => 15,	'résultat' => false),
+		array('heure' => 24,'minute' => 25,	'résultat' => false),
+		array('heure' => 24,'minute' => 30,	'résultat' => false),
+		array('heure' => 24,'minute' => 45,	'résultat' => false),
+		array('heure' => 23,'minute' => 0,	'résultat' => false),	# à l'extérieur des frontières <=> heure = 23
+		array('heure' => 23,'minute' => 5,	'résultat' => false),
+		array('heure' => 23,'minute' => 15,	'résultat' => false),
+		array('heure' => 23,'minute' => 25,	'résultat' => false),
+		array('heure' => 23,'minute' => 30,	'résultat' => false),
+		array('heure' => 23,'minute' => 45,	'résultat' => false),
 
 		# zone rien (chaine vide) <=> minute = 0 et heure quelconque
-		array('m' => 0,	'h' => 9,	'r' => ''),	# dans la zone
+		array('minute' => 0,	'heure' => 9,	'résultat' => ''),	# dans la zone
 		# les frontières droite, gauche et dessus on déjà été testées cf resp. Erreur zone 4, 3 et 1. il reste la frontière du dessous
-		array('m' => 1,	'h' => 9,	'r' => '1'),
+		array('minute' => 1,	'heure' => 9,	'résultat' => '1'),
 
 		# zone "et quart" <=> minutes dans [13,17] et heure dans [0;12]
-		array('m' => 15,	'h' => 9,	'r' => 'et quart'),	# dans la zone
+		array('minute' => 15,	'heure' => 9,	'résultat' => 'et quart'),	# dans la zone
 		
-		array('m' => 13,	'h' => 9,	'r' => 'et quart'), # à l'intérieur des frontières <=> heure dans {9h13(dessus), 12h15(droite) 9h17(dessous) 0h15(gauche)}
-		array('m' => 15,	'h' => 12,	'r' => 'et quart'),
-		array('m' => 17,	'h' => 12,	'r' => 'et quart'),
+		array('minute' => 13,	'heure' => 9,	'résultat' => 'et quart'), # à l'intérieur des frontières <=> heure dans {9h13(dessus), 12h15(droite) 9h17(dessous) 0h15(gauche)}
+		array('minute' => 15,	'heure' => 12,	'résultat' => 'et quart'),
+		array('minute' => 17,	'heure' => 12,	'résultat' => 'et quart'),
 		# la frontière de gauche (0h15) à déjà été testée dans zone Erreur zone 3
 	);
  }
