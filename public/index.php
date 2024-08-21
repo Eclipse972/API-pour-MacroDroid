@@ -32,7 +32,7 @@ if (is_string($reponse)) {
 
 if ((is_array($reponse)) && (isset($reponse['heure'])) && (isset($reponse['minute']))) {
 ?>
-{"heure":"<?=$reponse['heure']?>","minute":"<?=$reponse['minute']?>}
+{"heure":<?=$reponse['heure']?>,"minute":<?=$reponse['minute']?>}
 <?php
 	exit;
 }
