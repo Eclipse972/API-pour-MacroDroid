@@ -23,12 +23,9 @@ if (curl_errno($ch)) {
 } else {
    // Décoder la réponse JSON en tableau PHP
    $data = json_decode($response, true);
-
-   // Afficher les données décodées
-   echo '<pre>';
-   print_r($data);
-   echo '</pre>';
 }
 
 // Fermeture de la session cURL
 curl_close($ch);
+
+echo "il est {$data['hour']}:{$data['minute']}\n";
