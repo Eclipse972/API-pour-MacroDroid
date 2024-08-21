@@ -5,7 +5,7 @@
  * @param float longitude
  * @return array|string tableau associatif contenant heure et minute ou un message d'erreur
  */
-function requeteAPI(float $latitude = 49.4295387, float $longitude = 2.0807123) : array|string {
+function requeteAPI(float $latitude = 51.50735, float $longitude = -0.127758) : array|string {
 	$requeteCURL = curl_init();
 	curl_setopt(
 		$requeteCURL,
