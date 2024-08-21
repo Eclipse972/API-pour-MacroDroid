@@ -26,7 +26,8 @@ Voici les exceptions et approximations dans ma manière de dire l'heure:
 - si minute entre 13 et 16 et heure &lt; 13 je dis "et quart". Ex; "9h13" -&gt; "9 heure et quart" par contre 15h16 reste inchangé.
 - si minute entre 28 et 31 et heure &lt; 13 je dis "et demi". Ex: "11h27" -&gt; "11 heure et demi" mais 13h30 reste inchangé.
 
-Pour déterminer l'heure je ne vais pas utiliser l'heure système mais utiliser l'API [WorldTimeAPI](http://worldtimeapi.org/) pour m'entrainer à exploiter une API dans le traitement de mon serveur web.
+Pour déterminer l'heure je ne vais pas utiliser l'heure système mais utiliser [Time API](https://www.timeapi.io//) pour m'entrainer à exploiter une API dans le traitement de mon serveur web. Pourquoi ce choix?
+Time API donne l'heure locale au point GPS spécifié.
 
 La réponse du serveur sera un objet JSON:
 
