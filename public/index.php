@@ -2,6 +2,7 @@
 include 'minute.php';
 include 'heure.php';
 include 'extractionParametre.php';
+include 'requete.php';
 
 # récupération des paramètres de type float
 $latitude = extractionParamètre('latitude', $_GET);
