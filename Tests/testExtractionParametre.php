@@ -4,7 +4,7 @@ function testExtractionParametre() : string {
 	$Tvaleur = array(
 		'a' => null,
 		'b' => false,
-		'c' => 3.14,
+		'c' => 3.141,
 		'd' => '2.78',
 		'e' => '9,32'
 	);
@@ -12,7 +12,7 @@ function testExtractionParametre() : string {
 	$Tassertion = array(
 		array('paramètre' => 'a',	'réponse' => false),
 		array('paramètre' => 'b',	'réponse' => false),
-		array('paramètre' => 'c',	'réponse' => false),
+		array('paramètre' => 'c',	'réponse' => 3.141),
 		array('paramètre' => 'd',	'réponse' => 2.78),
 		array('paramètre' => 'e',	'réponse' => false),
 		array('paramètre' => 'f',	'réponse' => false)
