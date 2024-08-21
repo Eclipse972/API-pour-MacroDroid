@@ -21,7 +21,13 @@ $response = curl_exec($ch);
 if (curl_errno($ch)) {
     echo 'Erreur cURL : ' . curl_error($ch);
 } else {
-    echo $response;
+   // Décoder la réponse JSON en tableau PHP
+   $data = json_decode($response, true);
+
+   // Afficher les données décodées
+   echo '<pre>';
+   print_r($data);
+   echo '</pre>';
 }
 
 // Fermeture de la session cURL
