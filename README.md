@@ -33,8 +33,7 @@ La réponse du serveur sera un objet JSON:
 
 ```
 {
-    "heure" : "ma manière de dire l'heure",
-    "minutes" : "ma manière de dire la minute"
+    "heure" : "ma manière de dire l'heure ou un message d'erreur"
 }
 ```
 
