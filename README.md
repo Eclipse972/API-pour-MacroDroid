@@ -37,10 +37,9 @@ La réponse du serveur sera un objet JSON:
 }
 ```
 
-Données qui seront intégrées à la phrase qui sera lue par la synthèse vocale de MD
+Heure qui sera intégrée à la phrase qui sera lue par la synthèse vocale de MD.
 
 Mon serveur:
-
 - un hébergement web sur lequel j'ai créé un sous-domaines pour l'expérience
 - php 8
 
