@@ -45,4 +45,4 @@ Mon serveur:
 - un hébergement web sur lequel j'ai créé un sous-domaines pour l'expérience
 - php 8
 
-Pour les plus geek ça ne devrait être difficile d'utiliser à la place un Raspberry PI avec une application en python.
+Pour les plus geek ça ne devrait pas être difficile d'utiliser à la place un Raspberry PI avec une application en python.
